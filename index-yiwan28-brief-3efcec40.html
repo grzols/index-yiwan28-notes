@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>关于 亿万28 · 故事与点滴</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f2f4f6;
+      font-family: "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+      line-height: 1.8;
+      color: #2c3e50;
+      padding: 2rem 1.2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-wrapper {
+      max-width: 820px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* Hero 开场 */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      border-bottom: 1px solid #e3e8ed;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero .short-line {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      color: #1e2a36;
+      background: #ecf0f3;
+      display: inline-block;
+      padding: 0.3rem 1.8rem;
+      border-radius: 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero .sub-sentence {
+      font-size: 1rem;
+      color: #52616b;
+      max-width: 640px;
+      margin: 0.5rem auto 0;
+      line-height: 1.9;
+    }
+
+    /* 卡片通用 */
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0,0,0,0.04);
+      border: 1px solid #e7ebef;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.2rem;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: #1f2a36;
+      margin-bottom: 1.2rem;
+      border-left: 4px solid #a7b4be;
+      padding-left: 1rem;
+    }
+
+    .card p {
+      margin-bottom: 1rem;
+      color: #3f4a55;
+    }
+
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 特点列表 温润样式 */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.2rem 0 0.5rem;
+    }
+
+    .feature-list li {
+      position: relative;
+      padding: 0.6rem 0 0.6rem 2rem;
+      border-bottom: 1px dashed #e9edf1;
+      color: #2d3a46;
+    }
+
+    .feature-list li:last-child {
+      border-bottom: none;
+    }
+
+    .feature-list li::before {
+      content: "·";
+      position: absolute;
+      left: 0.4rem;
+      top: 0.6rem;
+      font-size: 1.6rem;
+      color: #8b9aa8;
+      line-height: 1;
+    }
+
+    /* 提示小标签 */
+    .note-tag {
+      display: inline-block;
+      background: #eef2f5;
+      color: #3f4e5c;
+      font-size: 0.85rem;
+      border-radius: 30px;
+      padding: 0.1rem 1rem;
+      margin-right: 0.6rem;
+      border: 1px solid #dbe1e7;
+    }
+
+    .faq-summary {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      margin-top: 1.2rem;
+      border: 1px solid #e1e7ed;
+    }
+
+    .faq-summary dt {
+      font-weight: 500;
+      color: #1f2c38;
+      margin-top: 1rem;
+    }
+
+    .faq-summary dt:first-of-type {
+      margin-top: 0;
+    }
+
+    .faq-summary dd {
+      margin: 0.2rem 0 1rem 1rem;
+      color: #475763;
+      font-size: 0.95rem;
+    }
+
+    /* 温和结尾 */
+    .gentle-footer {
+      text-align: center;
+      padding: 2rem 0.5rem 1.2rem;
+      border-top: 1px solid #e3e8ed;
+      margin-top: 1rem;
+      color: #607182;
+      font-size: 0.95rem;
+    }
+
+    .gentle-footer a {
+      color: #2a4359;
+      text-decoration: none;
+      border-bottom: 1px dotted #b8c6d2;
+      font-weight: 400;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .gentle-footer a:hover {
+      color: #16232e;
+      border-bottom-color: #16232e;
+    }
+
+    .inline-link {
+      color: #2a4359;
+      text-decoration: none;
+      border-bottom: 1px dotted #b8c6d2;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .inline-link:hover {
+      color: #16232e;
+      border-bottom-color: #16232e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      body {
+        padding: 1.2rem 0.8rem;
+      }
+      .card {
+        padding: 1.6rem 1.2rem;
+      }
+      .hero .short-line {
+        font-size: 1.2rem;
+        padding: 0.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- 开场短句 -->
+  <div class="hero">
+    <div class="short-line">一段路，一种陪伴</div>
+    <div class="sub-sentence">
+      从熟悉到陌生，再从陌生回到熟悉的站点，总有一些角落让人愿意停下来看一看。<br>
+      这里是关于 <a href="https://index-yiwan28.com" class="inline-link">亿万28</a> 的一份简单介绍与回顾。
+    </div>
+  </div>
+
+  <!-- 承接段落：站点与可信说明 -->
+  <div class="card">
+    <h2>站点侧影 · 安静地存在着</h2>
+    <p>
+      许多人在网上来来去去，会遇到一些值得驻足的页面。<strong>亿万28</strong> 并不是一个喧闹的平台，它更像是信息流里一个安静的节点——没有闪烁的横幅，也没有强迫式的弹窗。从最初搭建到现在，它的存在方式一直很朴素：提供一个清晰的入口，让有需要的人可以自己决定是否深入了解。
+    </p>
+    <p>
+      也正因为这份克制，反而让一些使用者觉得踏实。不需要注册繁琐的账号，也不必担心信息被过度收集。你看到的，就是它想呈现的：一个简洁的界面，一些经过整理的内容，以及指向更具体功能的路径。背后没有夸张的宣传语，只有日复一日稳定运转的服务器。
+    </p>
+  </div>
+
+  <!-- 特点列表 -->
+  <div class="card">
+    <h2>几个让人记住的细节</h2>
+    <ul class="feature-list">
+      <li><strong>界面干净</strong> —— 没有多余广告，主要区域一目了然，对初次接触的人友好。</li>
+      <li><strong>响应及时</strong> —— 页面轻量，打开速度快，即使在网络环境一般的地区也能流畅加载。</li>
+      <li><strong>持续更新</strong> —— 内容并非一成不变，团队会根据使用反馈做小幅调整，保持信息有效性。</li>
+      <li><strong>尊重隐私</strong> —— 不追踪用户行为，不设置强制 Cookie 弹窗，访客来去自如。</li>
+      <li><strong>直白呈现</strong> —— 每一个功能入口都有明确文字说明，不需要猜测按钮的含义。</li>
+    </ul>
+  </div>
+
+  <!-- 温和的提示 + FAQ 摘要 -->
+  <div class="card">
+    <h2>一些你可能想知道的</h2>
+    <div class="faq-summary">
+      <dl>
+        <dt><span class="note-tag">Q</span> 这个站点主要做什么？</dt>
+        <dd>它定位为一个信息整合与工具引导页面，你可以把它理解成一座小站，通往特定内容的起点。具体用途在页面上有清晰的分区，按照指引即可了解。</dd>
+
+        <dt><span class="note-tag">Q</span> 内容可靠吗？多久更新一次？</dt>
+        <dd>所有公开信息都经过基础核实，不包含虚假或诱导性内容。更新频率不固定，但重要变动会及时同步。建议定期回来看一眼，或许会有细微变化。</dd>
+
+        <dt><span class="note-tag">Q</span> 是否需要付费或注册？</dt>
+        <dd>完全免费，也无需注册或留下任何个人信息。直接通过浏览器访问即可使用所有公开部分。部分功能可能需要外部环境的配合，但站点本身不设置付费门槛。</dd>
+      </dl>
+    </div>
+    <p style="margin-top: 1.4rem; font-size: 0.95rem; color: #546573;">
+      如果你还有别的疑问，不妨亲自到站内看一看。很多问题其实在浏览过程中就能找到答案。
+    </p>
+  </div>
+
+  <!-- 温和结尾 + 自然嵌入链接 -->
+  <div class="gentle-footer">
+    <p>
+      写到最后，想起一个朴素的道理：好的站点不需要用力吆喝，它就在那里，等着需要它的人。<br>
+      如果你愿意，可以随时去 <a href="https://index-yiwan28.com">亿万28</a> 转转，也许会有意料之外的发现。<br>
+      祝浏览愉快，不止于此。
+    </p>
+    <p style="margin-top: 1.2rem; font-size: 0.85rem; color: #8a99a8;">
+      · 略略几笔，不成文章 ·
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
